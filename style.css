@@ -1,0 +1,196 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: #767676bb rgba(0,0,0);
+}
+
+/* Setup of scrollbar styling*/
+*::-webkit-scrollbar {
+width: 10px;
+height: 10px;
+
+}
+*::-webkit-scrollbar-track {
+background: rgba(87, 87, 87, 0.2);
+border-radius: 10px;
+}
+*::-webkit-scrollbar-thumb {
+background-color: #767676bb;
+border-radius: 5px;
+border: 3px solid rgba(#767676bb,0.36);
+
+}
+::-webkit-scrollbar-corner {
+    background-color: transparent; 
+}
+
+/* I'm by no means a good designer, so i don't expect much laughing at design (just a little bit) */
+
+.wrapper{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+main{
+    display: inherit;
+    flex-direction: row;
+    height: calc(100vh - 150px);
+    font: 1rem "Fira Sans", sans-serif;
+}
+
+header{
+    display:flex;
+    flex-direction: row;
+    min-height: 50px;
+    color:white;
+    padding-left: 10px;
+    border-bottom: 2px solid white;
+    background: rgb(132,127,223);
+    background: linear-gradient(266deg, rgba(132,127,223,1) 0%, rgba(221,168,255,1) 69%, rgba(31,0,255,1) 100%);
+    font: 1rem "Fira Sans", sans-serif;
+}
+
+header > *{
+    align-self: center;
+    margin-left: 20px;
+}
+
+footer{
+    font: 1rem "Fira Sans", sans-serif;
+    min-height: 100px;
+}
+
+.navbar-button{
+    font-weight: 600;
+    align-self: center;
+    font-size: 25px;
+}
+
+.sidebar{
+    overflow-y: auto;
+    width: 200px;
+    border-right: 1px solid black;
+    height:auto;
+}
+
+.chat{
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.chat--message{
+    display: flex;
+    border-radius: 10px;
+    padding:10px;
+    max-width: 100%;
+}
+
+.chat--message:hover{
+    background-color: #eee;
+}
+
+.chat--message--text{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+}
+
+.chat--message--text__author{
+    color: rgb(109, 109, 231);
+    font-weight: 600;
+    display: inherit;
+    text-decoration:underline;
+}
+
+.chat--message__time{
+    padding-left: 5px;
+    align-self: center;
+    color: #bbb;
+    font-size: small;
+    text-decoration: none;
+}
+.chat--message--text__message{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.user-plate{
+    padding:10px;
+    align-items: center;
+    justify-content: start;
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid grey;
+
+}
+.user-plate:hover{
+    cursor: pointer;
+ background-color: rgb(206, 208, 208);
+}
+
+.user-plate__name{
+    font-weight: 600;
+    padding-left: 5px;
+    width: 100%;
+}
+
+.user-plate__image {
+    width: 35px;
+}
+
+.footer{
+    border-top: 1px solid #ccc;
+    height:100px;
+    display:flex;
+    flex-direction: row;
+    width:100%;
+    background: rgb(132,127,223);
+    background: linear-gradient(90deg, rgba(132,127,223,1) 0%, rgba(221,168,255,1) 69%, rgb(4, 0, 229) 100%);
+}
+
+.message-input{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+}
+
+.message-input-form{
+    font-size: 16px;
+    width:80%;
+    height: 40%;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.message-input-form:focus{
+    outline: none;
+}
+
+.message-input-send-button{
+    margin: 10px;
+}
+
+.message-input-add-button{
+    margin:10px;
+
+}
+.message-input-send-button:hover{
+    cursor: pointer;
+}
+
+.message-input-add-button:hover{
+    cursor: pointer;
+}
+
+.message-input-form:focus::placeholder{
+    color:#aaa;
+}
